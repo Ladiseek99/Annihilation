@@ -3,6 +3,7 @@
 namespace Annihilation\Game;
 
 class Game{
+  
   public function __construct($id, Annihilation $plugin){
     $this->id = $id;
     $this->plugin = $plugin;
