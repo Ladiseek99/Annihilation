@@ -3,7 +3,7 @@ Annihilation plugin for PocketMine [IN PROGRESS]
 Plugin is developed for BladeStorm server.
 Please do not copy code without asking me, thanks.
 
-#####################################################
+#####################################################\n
 Current Developers: [ImKyd]
 Development Info: 0%
 [CREATE PULL REQUEST IF YOU WANT HELP]
