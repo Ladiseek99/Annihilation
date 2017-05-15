@@ -11,5 +11,6 @@ class Game{
     $this->bluespawn = $plugin->data[$this->id]["spawn2"];
     $this->greenspawn = $plugin->data[$this->id]["spawn3"];
     $this->yellspawn = $plugin->data[$this->id]["spawn4"];
+    $this->m
   }
 }
