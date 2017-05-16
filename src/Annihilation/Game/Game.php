@@ -47,7 +47,9 @@ class Game{
   }
   
   public function teleportToGame(Player $p){
-    //TODO
+    if($this->getData($p)->wasInGame()){
+        //TODO check if is nexus alive
+    }
     $p->sendMessage(Annihilation::PREFIX . "§aJoining to $this->id");
   }
 }
