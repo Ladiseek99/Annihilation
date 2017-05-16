@@ -9,6 +9,7 @@ class Game{
   public $yellownexus = 75;
   public $greennexus = 75;
   public $started = false;
+  public $players = [];
   
   public function __construct($id, Annihilation $plugin){
     $this->id = $id;
@@ -21,6 +22,9 @@ class Game{
   }
   
   public function getPlayers(){
+    foreach($this->players as $p){
+      return $p;
+    }
   }
   
   public function startGame(){
