@@ -4,6 +4,7 @@ namespace Annihilation\Object;
 
 class Player{
   public $team = null;
+  public $isingame = false;
   public $name;
   public $wasingame = false;
   public $kit = "civilian";
