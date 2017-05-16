@@ -28,7 +28,7 @@ class Game{
   }
   
   public function startGame(){
-    $this->started == true;
+    $this->started = true;
     $this->setPhase(1);
   }
   
@@ -38,5 +38,10 @@ class Game{
         $this->getPlayers()->sendMessage("§aPhase 1 started");
         $this->phase = 1;
     }
+  }
+  
+  public function teleportToGame(Player $p){
+    //TODO
+    $p->sendMessage(Annihilation::PREFIX . "§aJoining to $this->id");
   }
 }
