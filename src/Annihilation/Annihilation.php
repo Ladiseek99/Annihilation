@@ -28,11 +28,20 @@ class Main extends PluginBase implements Listener{
      }
   
      public function isPlaying(Player $p){
-       if($this->getData()->
-     }
+       if($this->getData()->isingame == false){
+         return false;
+     }else{
+         return true;
+       }
   
      public function onNexusBreak($nexus, BlockBreakEvent $e){
        $p = $e->getPlayer();
+       $b = $e->getBlock();
+       if($this->isPlaying($p){
+         if($b instaceof /*Nexus*/){
+           //TODO 
+         }
+       }
      }
   
      public function setMapData(){
