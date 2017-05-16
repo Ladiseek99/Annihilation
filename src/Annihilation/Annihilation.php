@@ -23,6 +23,18 @@ class Main extends PluginBase implements Listener{
                                     "min-players" => 2]];
      }
   
+     public function getData(Player $p){
+       return  $this->playerData[$player->getId()] = $data = new PlayerData($p->getName());
+     }
+  
+     public function isPlaying(Player $p){
+       if($this->getData()->
+     }
+  
+     public function onNexusBreak($nexus, BlockBreakEvent $e){
+       $p = $e->getPlayer();
+     }
+  
      public function setMapData(){
        $this->data = ["Canyon" => ["spawn-1" => new Vector3(1,1,1),
                                    "spawn-2" => new Vector3(1,1,1),
