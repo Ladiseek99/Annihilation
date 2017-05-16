@@ -10,6 +10,7 @@ class Game{
   public $greennexus = 75;
   public $started = false;
   public $players = [];
+  public $playerData = [];
   
   public function __construct($id, Annihilation $plugin){
     $this->id = $id;
@@ -38,6 +39,11 @@ class Game{
         $this->getPlayers()->sendMessage("§aPhase 1 started");
         $this->phase = 1;
     }
+  }
+  
+  public function getData(Player $p){
+         $dato =  $this->playerData[$player->getId()] = $data = new PlayerData($p->getName());
+         return $dato;
   }
   
   public function teleportToGame(Player $p){
