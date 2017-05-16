@@ -33,8 +33,12 @@ class Main extends PluginBase implements Listener{
                                                      
      }
  
-     public function inInGame(Player $p){
-       //TODO
+     public function inInGame($game){
+       $gejm = new Game($game, $this);
+       if($gejm->ingame == false){
+         return false;
+       }else{
+         return true;
      }
   
   
