@@ -33,6 +33,17 @@ class Game{
     $this->setPhase(1);
   }
   
+  public function stopGame($reason = "Unknown"){
+    $this->rednexus = 75;
+    $this->bluenexus = 75;
+    $this->yellownexus = 75;
+    $this->greennexus = 75;
+    $this->started = false;
+    $this->players = [];
+    $this->playerData = [];
+    $this->getPlayers()->sendMessage(Annihilation::PREFIX . "Game was cancelled due to $reason");
+  }
+  
   public function setPhase($phase){
     switch($phase){
         case 1;
