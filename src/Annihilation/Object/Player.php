@@ -20,6 +20,14 @@ class Player{
     $this->team = $team;
   }
   
+  public function wasInGame(){
+    if($this->wasingame == false){
+      return false;
+    }else{
+      return true;
+    }
+  }
+  
   public function getKit(){
     return $this->kit;
   }
