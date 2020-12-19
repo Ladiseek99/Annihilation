@@ -1,8 +1,49 @@
-§t<?php
+<?php
 
 namespace Annihilation\Game;
 
 class Game{
+  
+  const GAME_STARTED;
+  const GAME_ENDED;
+  const STATE_HUB;
+  
+  const PHASE_1;
+  const PHASE_2;
+  const PHASE_3;
+  const PHASE_4;
+  const PHASE_5;
+  
+  /** @var Annihilation $plugin */
+  public $plugin;
+  
+    /** @var KitManager $kitManager */
+** @var KitManager $kitManager */
+
+    public $kitManager;
+
+    /** @var VotingManager $votingManager */
+
+    public $votingManager;
+
+
+    public $kitManager;
+
+    /** @var VotingManager $votingManager */
+
+    public $votingManager;
+
+    /** @var WorldManager $worldManager */
+
+    public $worldManager;
+
+    /** @var BossManager $bossManager */
+
+    public $bossManager;
+
+    /** @var EnderManager $enderManager */
+
+    public $enderManager;
   
   public $rednexus = 75;
   public $bluenexus = 75;
@@ -15,11 +56,21 @@ class Game{
   public function __construct($id, Annihilation $plugin){
     $this->id = $id;
     $this->plugin = $plugin;
+    $this->gameManager = new GameManager($this);
+    $this->gameListener = new GameListener($this);
     $this->redspawn = $plugin->data[$this->id]["spawn1"];
     $this->bluespawn = $plugin->data[$this->id]["spawn2"];
     $this->greenspawn = $plugin->data[$this->id]["spawn3"];
     $this->yellspawn = $plugin->data[$this->id]["spawn4"];
-    $this->m
+    $this->blueJoinSign = $plugin->data[$this->id["blueJoinSign"];
+    $this->redJoinSign = $plugin->data[$this->id["redJoinSign"];         
+    $this->yellowJoinSign = $plugin->data[$this->id["yellowJoinSign"];
+    $this->greenJoinSign = $plugin->data[$this->id["greenJoinSign"];
+                                         
+    $this->getScheduler()->schedulerepeatingTask(new TimerTask($this), 20, 20); 
+    $this->getScheduler()->scheduleDelayedTask(new GameTask($this), 15);                                      
+                               
+                                        
   }
   
   public function getPlayers(){
